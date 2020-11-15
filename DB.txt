@@ -1,0 +1,68 @@
+CREATE DATABASE base1;
+
+----------------------------------------------------------------------------------------------
+
+USE base1;
+
+----------------------------------------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS  tbAlumno(
+	idalumno INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(20),
+    direccion VARCHAR(100),
+    edad INT
+);
+
+---------------------------------------------------------------------------------------------
+
+*** PROCEDIMIENTO PARA INGERSAR UN ALUMNO A LA TABLA ***
+
+CREATE PROCEDURE insertAlumno(
+    IN par_nombre VARCHAR(50),
+    IN par_direccion VARCHAR(50),
+    IN par_edad VARCHAR(50)
+)
+
+INSERT INTO tbalumno (nombre, direccion, edad) VALUES (par_nombre, par_direccion, par_edad);
+
+----------------------------------------------------------------------------------------------
+
+*** PROCEDIMIENTO PARA ACTUALIZAR UN ALUMNO EN LA TABLA ***
+
+CREATE PROCEDURE updateAlumno(
+    IN par_id INT,
+    IN par_nombre VARCHAR(50),
+    IN par_direccion VARCHAR(100),
+    IN par_edad INT
+)
+
+UPDATE tbalumno SET nombre = par_nombre, direccion = par_direccion, edad = par_edad, idalumno = par_id;
+
+----------------------------------------------------------------------------------------------
+
+*** PROCEDIMIENTO PARA ELIMINAR UN ALUMNO EN LA TABLA ***
+
+CREATE PROCEDURE deleteAlumno(
+    IN par_id INT
+)
+
+DELETE FROM tbalumno WHERE idalumno = par_id;
+
+----------------------------------------------------------------------------------------------
+
+*** PROCEDIMIENTO PARA MOSTRAR ALUMNOS DE LA TABLA ***
+
+CREATE PROCEDURE selectAlumno(
+)
+
+SELECT * FROM tbalumno;
+
+----------------------------------------------------------------------------------------------
+
+*** PROCEDIMIENTO PARA MOSTRAR UN ALUMNO POR ID DE LA TABLA ***
+
+CREATE PROCEDURE selectAlumnoID(
+    IN par_id int  
+)
+
+SELECT * FROM tbalumno WHERE idalumno = par_id;

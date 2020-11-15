@@ -17,19 +17,35 @@
     </nav>
      <form name="FrmInsertar" action="enterRegister.php" method="post" style="width:50%; margin: auto; border-radius: 15px; padding: 20px; margin-top: 10vh; text-align: center; box-shadow: 4px 4px 4px rgba(0,0,0,0.6); border: 1px solid gray;">
         <h2>Formulario de Insertar Alumno </h2> <br>
-
          <div class="information">
-                 <p>
-                     Nombre: <input type="text" name="txtnombre" size="20" minlength="4" required placeholder="Enter your name"><br>
-                 </p>
-                 <p>
-                     Direccion: <input type="text" name="txtdireccion" size="20" minlength="4" required placeholder="Enter your direction"><br>
-                 </p>
-                 <p>
-                     Edad: <input type="number" name="txtedad" size="20" minlength="1" required placeholder="Enter your age"><br>
-                 </p>
+             <table style="width:100%; margin:auto; text-align: center">
+                 <tr>
+                     <td>
+                         Nombre: 
+                     </td>
+                     <td>
+                         <input type="text" name="txtnombre" size="20" minlength="4" required placeholder="Enter your name"><br>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>
+                         Direccion: 
+                     </td>
+                     <td>
+                         <input type="text" name="txtdireccion" size="20" minlength="4" required placeholder="Enter your direction"><br>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>
+                         Edad:
+                     </td>
+                     <td>
+                         <input type="number" name="txtedad" size="20" minlength="1" required placeholder="Enter your age"><br>
+                     </td>
+                 </tr>
+                </table>
              </div>
-             <div class="buttons">
+            <div class="buttons" style="margin-top:4vh;">
                  <input class="btn btn-primary" type = "submit" value= "Insert new register">
                  <input class="btn btn-primary" type="reset" value="Cancel">
              </div>

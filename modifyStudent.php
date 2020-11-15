@@ -26,6 +26,7 @@
         
 	<form method = "post" name="frmvalor" action="saveChanges.php">
 		<TABLE>
+		<h1>CAMBIAR LOS DATOS DE UN ESTUDIANTE</h1>
 			<TR>
 				<TD>Idalumno:</TD>
 				<TD><input type="text" name="txtidAlumno2" value="<?php echo $row['idalumno'];?>"><input type="text" name="txtidAlumno" style="visibility:hidden" value="<?php echo $row['idalumno'];?>"></TD>

@@ -86,7 +86,7 @@
         IN par_edad INT
     )
     
-    UPDATE tbalumno SET nombre = par_nombre, direccion = par_direccion, edad = par_edad, idalumno = par_id;";
+    UPDATE tbalumno SET nombre = par_nombre, direccion = par_direccion, edad = par_edad WHERE idalumno = par_id;";
     
         $runQuery = mysqli_query($connection, $query) or die ("ERROR IN CREATE STORE PROCEDURE");
     
